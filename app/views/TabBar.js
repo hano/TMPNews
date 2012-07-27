@@ -5,8 +5,9 @@ TMPNews.TabBar = M.TabBarView.design({
     anchorLocation: M.TOP,
 
     tab1: M.TabBarItemView.design({
-        value: 'Tab 1',
-        page: '',
+
+        value: M.I18N.l('about'),
+
         events:{
             vclick:{
                 target: TMPNews.PageController,
@@ -16,7 +17,8 @@ TMPNews.TabBar = M.TabBarView.design({
     }),
 
     tab2: M.TabBarItemView.design({
-        value: 'Tab 2',
+
+        value: M.I18N.l('twitter'),
 
         events:{
             vclick:{
@@ -27,7 +29,9 @@ TMPNews.TabBar = M.TabBarView.design({
     }),
 
     tab3: M.TabBarItemView.design({
-        value: 'Tab 3',
+
+        value: M.I18N.l('blog'),
+
         events:{
             vclick:{
                 target: TMPNews.PageController,

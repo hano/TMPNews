@@ -1,0 +1,37 @@
+##### STEP1 ######
+
+espresso init -p TMPNews
+cd TMPNews
+espresso generate -v NewsPage
+espresso generate -v TabBar
+espresso generate -c NewsController
+espresso generate -c PageController
+
+setup main.js
+write TabBar
+write NewsPage
+	don't forget to include m_require('app/views/TabBar.js');
+
+write PageController
+write NewsController
+
+Test it with:
+	espresso server
+
+##### STEP2 ######
+Internationalization
+	espresso generate -i en_en
+		and copy this file and rename it to de_de
+		M.I18N.en_en in M.I18N.de_de umbenennen
+
+	update config.json
+		"supportedLanguages": [
+	        "de_de",
+    	    "en_en",
+        	"en_us"
+    	],
+	
+	Erste Texte hinzufügen
+		erklären warum undefined in der sprache steht
+
+	Views mit neuen Texten aktuallisieren

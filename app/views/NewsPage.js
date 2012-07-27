@@ -20,8 +20,11 @@ TMPNews.NewsPage = M.PageView.design({
         tabBar: TMPNews.TabBar,
 
         newsCarousel : M.CarouselView.design({
+
             childViews: 'page1 page2 page3',
+
             sizeCalculator: M.CAROUSEL_SIZE_SURROUNDING_ELEMENT,
+
             events: {
                 change: {
                     target: TMPNews.PageController,
@@ -30,7 +33,7 @@ TMPNews.NewsPage = M.PageView.design({
             },
             page1: M.CarouselItemView.design({
                 childViews: 'label',
-                tag: 'Item1',
+                tag:M.I18N.l('about'),
                 label: M.LabelView.design({
                     value: 'Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1',
                     cssClass: 'label red'
@@ -38,7 +41,7 @@ TMPNews.NewsPage = M.PageView.design({
             }),
             page2: M.CarouselItemView.design({
                 childViews: 'label',
-                tag: 'Item2',
+                tag:M.I18N.l('twitter'),
                 label: M.LabelView.design({
                     value: 'Item 2',
                     cssClass: 'label green'
@@ -46,7 +49,9 @@ TMPNews.NewsPage = M.PageView.design({
             }),
             page3: M.CarouselItemView.design({
                 childViews: 'label',
-                tag: 'Item3',
+
+                tag:M.I18N.l('twitter'),
+
                 label: M.LabelView.design({
                     value: 'Item 3',
                     cssClass: 'label blue'
