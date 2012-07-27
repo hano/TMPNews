@@ -343,11 +343,11 @@ M.CarouselView = M.View.extend(
                     }
 
                     $('#' + that.id).css('width', width);
-                    $('#' + that.id).css('height', height);
+                    //$('#' + that.id).css('height', height);
                     $('#' + that.id + ' .tmp-carousel-scroller').css('width', (that.direction === M.HORIZONTAL ? width * that.numItems : width));
-                    $('#' + that.id + ' .tmp-carousel-scroller').css('height', (that.direction === M.VERTICAL ? height * that.numItems : height));
+                    //$('#' + that.id + ' .tmp-carousel-scroller').css('height', (that.direction === M.VERTICAL ? height * that.numItems : height));
                     $('#' + that.id + ' ul.tmp-carousel-list li.tmp-carousel-item').css('width', width);
-                    $('#' + that.id + ' ul.tmp-carousel-list li.tmp-carousel-item').css('height', height);
+                    //$('#' + that.id + ' ul.tmp-carousel-list li.tmp-carousel-item').css('height', height);
 
                     /* add negative margin for any padding of outer element */
                     var margin = {
