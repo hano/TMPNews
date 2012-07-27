@@ -1,4 +1,10 @@
-/* Put you custom stylings here! */
-.myCssClass {
-    color: #FF0000;
+html,
+body,
+.ui-page{
+    height: 100%;
+    background: red;
+}
+
+.tmp-carousel-wrapper{
+    height: 100%;
 }

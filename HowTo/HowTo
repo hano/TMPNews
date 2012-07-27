@@ -1,5 +1,5 @@
 ##### STEP1 ######
-
+Initial steps
 espresso init -p TMPNews
 cd TMPNews
 espresso generate -v NewsPage
@@ -35,3 +35,50 @@ Internationalization
 		erklären warum undefined in der sprache steht
 
 	Views mit neuen Texten aktuallisieren
+
+##### STEP3 ######
+Model
+have a look at the twitter sample app:	https://github.com/mwaylabs/The-M-Project-Sample-Apps/blob/master/Twitter/
+update config.json
+	"proxies": [
+        {
+            "baseUrl": "http://search.twitter.com:80",
+            "proxyAlias": "twitter"
+        }
+    ],
+
+generate TwitterResultsTemplateView
+espresso generate -v TwitterResultsTemplateView attention default is a page
+espresso generate -c TwitterController
+espresso generate -m TweetModel
+add:
+twitterList: M.ListView.design({
+     contentBinding: {
+         target: TMPNews.TwitterController,
+         property: 'results'
+     },
+
+     listItemTemplateView: TMPNews.TwitterResultsTemplateView,
+
+     removeItemsOnUpdate: YES
+ })
+dont forget to include m_require('app/views/TwitterResultsTemplateView.js');
+test it in the console with:
+add TMPNews.TwitterController.search();
+
+and now do some crazy framework stuff to fix the carousel….
+
+and then style the app a little bit
+
+
+
+
+
+
+
+
+
+
+
+
+

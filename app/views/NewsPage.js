@@ -1,4 +1,5 @@
 m_require('app/views/TabBar.js');
+m_require('app/views/TwitterResultsTemplateView.js');
 
 TMPNews.NewsPage = M.PageView.design({
 
@@ -40,11 +41,19 @@ TMPNews.NewsPage = M.PageView.design({
                 })
             }),
             page2: M.CarouselItemView.design({
-                childViews: 'label',
+                childViews: 'twitterList',
+
                 tag:M.I18N.l('twitter'),
-                label: M.LabelView.design({
-                    value: 'Item 2',
-                    cssClass: 'label green'
+
+                twitterList: M.ListView.design({
+                    contentBinding: {
+                        target: TMPNews.TwitterController,
+                        property: 'results'
+                    },
+
+                    listItemTemplateView: TMPNews.TwitterResultsTemplateView,
+
+                    removeItemsOnUpdate: YES
                 })
             }),
             page3: M.CarouselItemView.design({

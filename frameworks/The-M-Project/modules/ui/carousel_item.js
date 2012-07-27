@@ -19,39 +19,39 @@
  * @extends M.View
  */
 M.CarouselItemView = M.View.extend(
-/** @scope M.CarouselItemView.prototype */ {
+    /** @scope M.CarouselItemView.prototype */ {
 
-    /**
-     * The type of this object.
-     *
-     * @type String
-     */
-    type: 'M.CarouselItemView',
+        /**
+         * The type of this object.
+         *
+         * @type String
+         */
+        type: 'M.CarouselItemView',
 
-    /**
-     * This property can be used to specify a tag, that is independent from the carousel
-     * item's content. This allows you to identify a carousel item e.g. within the callback
-     * of the carousel's change event.
-     *
-     * @type String
-     */
-    tag: null,
+        /**
+         * This property can be used to specify a tag, that is independent from the carousel
+         * item's content. This allows you to identify a carousel item e.g. within the callback
+         * of the carousel's change event.
+         *
+         * @type String
+         */
+        tag: null,
 
-    /**
-     * This method renders a carousel item and its content with an li element as the
-     * surrounding element.
-     *
-     * @private
-     * @returns {String} The carousel item view's html representation.
-     */
-    render: function() {
-        this.html = '<li id="' + this.id + '" class="tmp-carousel-item">';
+        /**
+         * This method renders a carousel item and its content with an li element as the
+         * surrounding element.
+         *
+         * @private
+         * @returns {String} The carousel item view's html representation.
+         */
+        render: function() {
+            this.html = '<li id="' + this.id + '" class="tmp-carousel-item">';
 
-        this.renderChildViews();
+            this.renderChildViews();
 
-        this.html += '</li>';
+            this.html += '</li>';
 
-        return this.html;
-    }
+            return this.html;
+        }
 
-});
+    });
